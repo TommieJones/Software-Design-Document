@@ -1,0 +1,77 @@
+ 
+
+Draw It or Lose It
+CS 230 Project Software Design Template
+Version 1.0
+ 
+Table of Contents
+
+CS 230 Project Software Design Template	1
+Table of Contents	2
+Document Revision History	2
+Executive Summary	3
+Requirements	3
+Design Constraints	3
+System Architecture View	3
+Domain Model	3
+Evaluation	4
+Recommendations	5
+
+
+Document Revision History
+
+Version	Date	Author	Comments
+1.0	06/18/23	Tommie Jones	
+
+ 
+Executive Summary
+
+The client, The Gaming Room, would like to create a web-based application that will allow users to play their game. The game application must have the ability to support one or more teams during the game. Each of these teams must have multiple players assigned to them. The team names must be unique to each team. So, the application will need to be able to check and compare team names while players are picking them. Only one instance of the game is allowed at a time. The code will need to make unique identifiers for each instance of the game, player, or team.
+
+Requirements
+
+Application must: be able to have one or more teams involved, able to assign multiple players to a team, compare names of teams to one another to ensure unique identifiers, only have one instance of the game at any given time.
+
+Design Constraints
+
+Budget is not mentioned in the initial discussion. This affects the design and will need to be discussed to decide how in depth this application design will go. How much time will be spent on the application and what are the time constraints on it? These things also affect the design.
+The design of the web application needs to take into consideration all the OS it will be run on. There are different ways of navigating different OS and different screen sizes. There is also the issue of only one instance of the game being allowed at a time. For an online application with many users this is a challenge.
+
+System Architecture View
+
+Please note: There is nothing required here for these projects, but this section serves as a reminder that describing the system and subsystem architecture present in the application, including physical components or tiers, may be required for other projects. A logical topology of the communication and storage aspects is also necessary to understand the overall architecture and should be provided.
+
+Domain Model
+
+The main code is the ProgramDriver. This code calls the SingletonTester. The Entity file code is the parent code of the files: Game, Team, and Player. Game, Team and Player inherit the attributes under Entity. GameService is associated with Game, Game is associated with GameService and Team, Team is associated with GameService and Player, Player is associated with Team.
+
+
+ 
+
+Evaluation
+
+Using your experience to evaluate the characteristics, advantages, and weaknesses of each operating platform (Linux, Mac, and Windows) as well as mobile devices, consider the requirements outlined below and articulate your findings for each. As you complete the table, keep in mind your client’s requirements and look at the situation holistically, as it all has to work together. 
+
+In each cell, remove the bracketed prompt and write your own paragraph response covering the indicated information. 
+
+Development Requirements	Mac	Linux	Windows	Mobile Devices
+Server Side	Mac is a stable host as it can run for days without issues when compared to other OS. Like windows it is simple to use when compared to Linux. While not as customizable as Linux it is more customizable than windows. Mac computers cost more than other systems. This is something to consider when choosing Mac. Like windows it has compatibility issues as well. Most scripts will work on Mac but some uncommon ones will not. 	Linux is an open source OS. Most of the tools and programs will be free to install and use. Linux is one of the most customizable Operating systems. Linux supports many different types of programing languages. 
+If the user is already using a different OS and needs to transfer over, the transfer is not simple. The learning curve goes hand in hand with this. Linux has a steep learning curve for the unfamiliar. 	Windows is a stable environment for hosting web applications. A user can host many different websites in one tab. Windows is easier to start up than other OS. Many of the features it comes with are disabled at first making going in to carefully pick what you need and don’t need easier. Windows is also the most used OS. The learning curve is not intense. Windows price is higher than other OS. As far as security goes for Windows it is not as developed as other OS. They are slowly catching up in this department but it is something to consider.	Accessibility is a good advantage to mobile devices. Most people have a mobile device of some kind whether it is a phone or a handheld gaming system. These devices are typically cheaper than the laptops and PCs required for other OS. Creating a web-based application for a mobile device rather than creating a mobile app for the device is not going to work nearly as well as a mobile app as they were created to run on these mobile devices. The format of the web application may look extremely different on such a smaller touch screen.
+Client Side	The cost of Mac programs and hardware are the highest of these operating systems. The OS is the most stable out of these and the learning curve is low. So time would not be a huge factor in this choice. 	Linux is open source meaning much of the tools and programs used with Linux are free. It is not as common as other Operating Systems making it harder to use for many users. While the cost would be lower the time it would take to learn the OS may be longer than the others. 	Windows is pricier than any other OS. It is not a free source like Linux. This may be made up for with its learning curve being so low as it is them most commonly used OS. 	Creating a simple web application to run on a mobile device would take less time and may be cheaper. However, figuring out how to make the program friendly on a mobile device can be challenging. 
+Development Tools	Swift is an open source language created by Apple. Python can be used as well as Java and Ruby.	Many different languages are supported by Linux including but not limited to: Python, PHP, Perl, and Ruby.	Perl, PHP, and ASP are supported by Windows. 	Java, Swift, JavaScript are all compatible and the best languages to build on mobile devices. 
+
+ 
+Recommendations
+
+1.	Operating Platform: Mac OS
+
+2.	Operating Systems Architectures: Mac OS is made up of several layers. The base layer is Darwin, the Unix Core. The graphics system includes Quartz, OpenGL, and QuickTime. The application level which has four components: Classic, Carbon, Cocoa, and Java. The interface is Aqua. 
+
+3.	Storage Management: iCloud is a good way to manage storage space for MacOS. More storage space can be made using this system.
+
+4.	Memory Management: Memory compaction can be used to manage memory for the application. The free space of the running system is compacted. This reduces fragmentation and improves memory allocation.
+
+ 
+5.	Distributed Systems and Networks: When using MacOS to create the application, Workspace ONE UEM can be used to make distribution of the application across platforms easier. This is an open-source program. This program is supported across many platforms including mobile platforms. 
+
+6.	Security: Device permissions are used on Workspace as well as password and username protected. Using this on MacOS will enhance security and keep company information safer. Username and password protection should be added to the application as well, possible when using MacOS. MacOS also comes with regular software updates to protect your applications and information within those applications. FireVault 2 will encrypt data on MacOS. Even if the hardware ends up lost the data will be protected.
